@@ -37,6 +37,10 @@ export const routes: Routes = [
                 loadComponent:()=>import('./exercices/ng-if/ng-if').then(m=>m.NgIf)
         },
         {
+                path:'ng-style-et-class', 
+                loadComponent:()=>import('./exercices/ng-style-et-class/ng-style-et-class').then(m=>m.NgStyleEtClass)
+        },
+        {
                 path:'**', 
                 loadComponent:()=>import('./shared/not-found/not-found').then(m=>m.NotFound)
         },

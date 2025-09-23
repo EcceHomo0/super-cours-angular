@@ -5,18 +5,20 @@
     <img
        [src]="Image" /> 
   </figure>
-  <div class="card-body">
+  <div class="card-body" [ngClass]="{oldMan:Age>50}">
     <h2 class="card-title">{{ Name }}</h2>
-    <p><strong>Status:</strong> {{ getStatus() }}</p>
+    <!-- <p [ngStyle]="{color:Status=='Offline'?couleurOffline:couleurOnline}"><strong>Status:</strong> {{ getStatus() }}</p> -->
+   <p [ngStyle]="{color:Status=='Offline'?'red':'green'}"><strong>Status:</strong> {{ getStatus() }}</p>
     <p><strong>Age:</strong> {{ Age }}</p>
     <p><strong>Bio:</strong> {{ Bio }}</p>
     <p><strong>Réputation:</strong> {{ Age < 25 ? 'Cool' : 'Ringard' }}</p>
     <div class="card-actions justify-end">
       <button class="btn btn-primary" (click)="handleClick()">{{ TextBouton }}</button>
+      <button class="btn btn-primary" (click)="ChangeStatus()">Changer Status</button>
     </div>
   </div>
 </div>
-
+        
 <form>
 
     <div>
@@ -42,4 +44,3 @@
 
 
 </form>
-    
