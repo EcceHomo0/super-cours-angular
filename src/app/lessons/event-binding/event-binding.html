@@ -1,0 +1,22 @@
+<h1>{{ Title }}</h1>
+<input type="text" placeholder="Saisissez quelque chose" class="input input-bordered w-full max-w-xs" (keyup)="handleInput($event)" />
+<p>Saisie : {{ saisie }}</p>
+<div class="card-actions">
+    <button class="btn btn-primary" (click)="handleClick()" [disabled]="statutBouton">{{ TextBouton }}</button>
+</div>
+<p>{{ listFriendsCreationStatus }}</p>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      [src]="Image" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ Name }}</h2>
+    <p><strong>Status:</strong> {{ getStatus() }}</p>
+    <p><strong>Age:</strong> {{ Age }}</p>
+    <p><strong>Bio:</strong> {{ Bio }}</p>
+    <p><strong>Réputation:</strong> {{ Age < 20 ? 'Cool' : 'Ringard' }}</p>
+  </div>
+</div>
+

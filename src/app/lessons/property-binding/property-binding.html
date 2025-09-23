@@ -1,0 +1,19 @@
+<h1>{{ Title }}</h1>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      [src]="Image" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ Name }}</h2>
+    <p><strong>Status:</strong> {{ getStatus() }}</p>
+    <p><strong>Age:</strong> {{ Age }}</p>
+    <p><strong>Bio:</strong> {{ Bio }}</p>
+    <p><strong>Réputation:</strong> {{ Age < 20 ? 'Cool' : 'Ringard' }}</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary" (click)="handleClick()">{{ TextBouton }}</button>
+    </div>
+  </div>
+</div>
+
