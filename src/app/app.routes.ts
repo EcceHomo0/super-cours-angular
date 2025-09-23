@@ -33,6 +33,10 @@ export const routes: Routes = [
                 loadComponent:()=>import('./exercices/formulaire-ng-model/formulaire-ng-model').then(m=>m.FormulaireNgModel)
         },
         {
+                path:'ng-if', 
+                loadComponent:()=>import('./exercices/ng-if/ng-if').then(m=>m.NgIf)
+        },
+        {
                 path:'**', 
                 loadComponent:()=>import('./shared/not-found/not-found').then(m=>m.NotFound)
         },
