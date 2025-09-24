@@ -1,0 +1,42 @@
+<p *ngFor="let ami of lesAmis">{{ ami.id }}, {{ ami.name }}, {{ ami.phone }}, {{ ami.email }}, {{ ami.premium }}</p>
+<button (click)="ajouterUnAmi()" class="btn btn-primary">Ajouter un ami</button>
+
+<!-- <div *ngFor="let ami of lesAmis"class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ ami.name }}</h2>
+    <p>{{ ami.id }}, {{ ami.phone }}, {{ ami.email }}, {{ ami.premium }}</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="grid">
+  <app-property-binding *ngFor="let item of lesAmis"></app-property-binding>
+</div>
+
+
+
+<!-- <input [(ngModel)]="inputNouveauNom" type="text" placeholder="Nom du pote" class="input input-bordered w-full sm:flex-1" />
+<button (click)="ajouterUnAmi()" class="btn btn-primary">Ajouter un ami</button>
+
+<div class="grid">
+  <div *ngFor="let ami of lesAmis" class="card bg-base-100 w-96 shadow-sm m-4">
+    <figure>
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        alt="Photo de {{ ami.name }}" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">{{ ami.name }}</h2>
+      <p>{{ ami.id }}, {{ ami.phone }}, {{ ami.email }}, {{ ami.premium }}</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div> -->

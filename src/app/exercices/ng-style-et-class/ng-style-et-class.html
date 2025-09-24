@@ -19,28 +19,20 @@
   </div>
 </div>
         
-<form>
-
-    <div>
-        <h2><strong>Veuillez indiquer l'URL de l'image : </strong></h2>
-        <input type="text" size="50" placeholder="Saisissez l'URL de l'image" [(ngModel)] = "Image" name="Image">
-    </div>
-    <div>
-        <h2><strong>Veuillez indiquer le nom de la personne : </strong></h2>
-        <input type="text" placeholder="Saisissez le nom" [(ngModel)] = "Name" name="Name">
-    </div>
-    <div>
-        <h2><strong>Veuillez indiquer le statut de la personne : </strong></h2>
-        <input type="text" placeholder="Saisissez le status" [(ngModel)] = "Status" name="Status">
-    </div>
-    <div>
-        <h2><strong>Veuillez indiquer l'âge de la personne : </strong></h2>
-        <input type="number" placeholder="Saisissez l'âge" [(ngModel)] = "Age" name="Age">
-    </div>
-    <div>
-        <h2><strong>Veuillez indiquer la biographie de la personne : </strong></h2>
-        <textarea rows="3" cols="50" type="text" placeholder="Saisissez la biographie" [(ngModel)] = "Bio" name="Bio"></textarea>
-    </div>
 
 
-</form>
+<fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+  <legend class="fieldset-legend">Edition des informations</legend>
+
+  <label class="label">URL de l'image</label>
+  <input type="text" size="50" placeholder="Saisissez l'URL de l'image" [(ngModel)] = "Image" name="Image">
+
+  <label class="label">Nom de la personne</label>
+  <input type="text" placeholder="Saisissez le nom" [(ngModel)] = "Name" name="Name">
+
+  <label class="label">Age de la personne</label>
+  <input type="number" placeholder="Saisissez l'âge" [(ngModel)] = "Age" name="Age">
+
+  <label class="label">Biographie de la personne</label>
+  <textarea rows="3" cols="50" type="text" placeholder="Saisissez la biographie" [(ngModel)] = "Bio" name="Bio"></textarea>
+</fieldset>

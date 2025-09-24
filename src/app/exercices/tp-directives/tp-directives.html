@@ -1,0 +1,3 @@
+<button (click)="gestionClick()" class="btn btn-primary">Afficher Détails</button>
+<p *ngIf="detailsVisible">Voici les détails supplémentaires...</p>
+<p *ngFor="let index of nbre_clics" [ngStyle]="{'background-color': index > 5 ? 'lightgray' : 'transparent'}" [ngClass]="{'sup5': index > 5}">{{ index }}</p>

@@ -41,6 +41,18 @@ export const routes: Routes = [
                 loadComponent:()=>import('./exercices/ng-style-et-class/ng-style-et-class').then(m=>m.NgStyleEtClass)
         },
         {
+                path:'ng-for', 
+                loadComponent:()=>import('./exercices/ng-for/ng-for').then(m=>m.NgForClass)
+        },
+        {
+                path:'ng-for-enfant', 
+                loadComponent:()=>import('./exercices/ngfor-enfant/ngfor-enfant').then(m=>m.NgforEnfant)
+        },
+        {
+                path:'tp-directives', 
+                loadComponent:()=>import('./exercices/tp-directives/tp-directives').then(m=>m.TpDirectives)
+        },
+        {
                 path:'**', 
                 loadComponent:()=>import('./shared/not-found/not-found').then(m=>m.NotFound)
         },
