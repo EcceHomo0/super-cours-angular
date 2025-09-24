@@ -53,6 +53,18 @@ export const routes: Routes = [
                 loadComponent:()=>import('./exercices/tp-directives/tp-directives').then(m=>m.TpDirectives)
         },
         {
+                path:'app-meteo-api', 
+                loadComponent:()=>import('./lessons/meteo-api/meteo-api').then(m=>m.MeteoApi)
+        },
+        {
+                path:'app-pokemon-api', 
+                loadComponent:()=>import('./lessons/pokemon-api/pokemon-api').then(m=>m.PokemonApi)
+        },
+        {
+                path:'app-parent', 
+                loadComponent:()=>import('./lessons/parent/parent').then(m=>m.Parent)
+        },
+        {
                 path:'**', 
                 loadComponent:()=>import('./shared/not-found/not-found').then(m=>m.NotFound)
         },

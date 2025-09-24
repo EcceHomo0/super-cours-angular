@@ -12,15 +12,12 @@ import { CommonModule } from '@angular/common';
 export class TpDirectives 
 {
   detailsVisible: boolean = false;
-  clics: number = 0;
   nbre_clics: number[] = [];
 
   gestionClick()
   {
     this.detailsVisible = !this.detailsVisible;
-    this.clics++;
-    this.nbre_clics.push(this.clics);
-    console.log(this.clics,this.nbre_clics);
+    this.nbre_clics.push(this.nbre_clics.length + 1);
   } 
 
 }

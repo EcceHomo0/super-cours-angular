@@ -2,37 +2,37 @@
 
 <div class="card bg-base-100 w-96 shadow-sm">
   <figure>
-    <img
-       [src]="Image" /> 
+    <img [src]="Image" />
   </figure>
   <div class="card-body" [ngClass]="{oldMan:Age>50}">
     <h2 class="card-title">{{ Name }}</h2>
     <!-- <p [ngStyle]="{color:Status=='Offline'?couleurOffline:couleurOnline}"><strong>Status:</strong> {{ getStatus() }}</p> -->
-   <p [ngStyle]="{color:Status=='Offline'?'red':'green'}"><strong>Status:</strong> {{ getStatus() }}</p>
+    <p [ngStyle]="{color:Status=='Offline'?'red':'green'}"><strong>Status:</strong> {{ getStatus() }}</p>
     <p><strong>Age:</strong> {{ Age }}</p>
     <p><strong>Bio:</strong> {{ Bio }}</p>
     <p><strong>Réputation:</strong> {{ Age < 25 ? 'Cool' : 'Ringard' }}</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary" (click)="handleClick()">{{ TextBouton }}</button>
-      <button class="btn btn-primary" (click)="ChangeStatus()">Changer Status</button>
-    </div>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary" (click)="handleClick()">{{ TextBouton }}</button>
+          <button class="btn btn-primary" (click)="ChangeStatus()">Changer Status</button>
+        </div>
   </div>
 </div>
-        
+
 
 
 <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
   <legend class="fieldset-legend">Edition des informations</legend>
 
   <label class="label">URL de l'image</label>
-  <input type="text" size="50" placeholder="Saisissez l'URL de l'image" [(ngModel)] = "Image" name="Image">
+  <input type="text" size="50" placeholder="Saisissez l'URL de l'image" [(ngModel)]="Image" name="Image">
 
   <label class="label">Nom de la personne</label>
-  <input type="text" placeholder="Saisissez le nom" [(ngModel)] = "Name" name="Name">
+  <input type="text" placeholder="Saisissez le nom" [(ngModel)]="Name" name="Name">
 
   <label class="label">Age de la personne</label>
-  <input type="number" placeholder="Saisissez l'âge" [(ngModel)] = "Age" name="Age">
+  <input type="number" placeholder="Saisissez l'âge" [(ngModel)]="Age" name="Age">
 
   <label class="label">Biographie de la personne</label>
-  <textarea rows="3" cols="50" type="text" placeholder="Saisissez la biographie" [(ngModel)] = "Bio" name="Bio"></textarea>
+  <textarea rows="3" cols="50" type="text" placeholder="Saisissez la biographie" [(ngModel)]="Bio"
+    name="Bio"></textarea>
 </fieldset>

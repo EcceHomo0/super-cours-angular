@@ -1,0 +1,12 @@
+<h1>Liste des Pokémons</h1>
+
+<div *ngFor="let pokemon of pokemons" class="card bg-base-100 w-96 shadow-sm">
+  <figure class="px-10 pt-10">
+    <img
+      [src]="pokemon.sprites.regular"
+      class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+    <h2 class="card-title">{{pokemon.name.fr}}</h2>
+  </div>
+</div>
