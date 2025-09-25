@@ -2,6 +2,10 @@
   <div class="flex-1">
     <a class="btn btn-ghost text-xl" routerLink="home">Home</a>
     <a class="btn btn-ghost text-xl" routerLink="about">About</a>
+    <a class="btn btn-ghost text-xl" routerLink="app-register">Inscription</a>
+    <a class="btn btn-ghost text-xl" routerLink="app-login">Connexion</a>
+    <a class="btn btn-ghost text-xl" (click)="logOut()" aria-label="Nous contacter">Déconnexion</a>
+    <a class="btn btn-ghost text-xl" routerLink="app-dashboard">Dashboard</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
@@ -16,6 +20,7 @@
             <li><a routerLink="app-meteo-api">Meteo API</a></li>
             <li><a routerLink="app-pokemon-api">Pokemon API</a></li>
             <li><a routerLink="app-parent">Parent</a></li>
+            <li><a routerLink="app-task-list-firebase">Task List Firebase</a></li>
           </ul>
         </details>
       </li>
@@ -29,6 +34,7 @@
             <li><a routerLink="ng-for">NgFor</a></li>
             <li><a routerLink="ng-for-enfant">NgFor Enfant</a></li>
             <li><a routerLink="tp-directives">TP Directives</a></li>
+            <li><a routerLink="app-input-parent">Exercice Input</a></li>
           </ul>
         </details>
       </li>

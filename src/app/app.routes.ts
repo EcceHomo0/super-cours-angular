@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
+import { AuthGuardService } from './services/auth-guard.service';
 export const routes: Routes = [
         // Utilisation classique import en Haut et on indique le composant
         {
@@ -64,6 +65,27 @@ export const routes: Routes = [
                 path:'app-parent', 
                 loadComponent:()=>import('./lessons/parent/parent').then(m=>m.Parent)
         },
+        {
+                path:'app-task-list-firebase', 
+                loadComponent:()=>import('./lessons/task-list-firebase/task-list-firebase').then(m=>m.TaskListFirebase)
+        },
+        {
+                path:'app-input-parent', 
+                loadComponent:()=>import('./exercices/input-parent/input-parent').then(m=>m.ListRendering)
+        },
+        {
+                path:'app-register', 
+                loadComponent:()=>import('./auth/register/register').then(m=>m.Register)
+        },
+        {
+                path:'app-login', 
+                loadComponent:()=>import('./auth/login/login').then(m=>m.Login)
+        },
+        {
+                path:'app-dashboard',
+                canActivate: [AuthGuardService],
+                loadComponent:()=>import('./auth/dashboard/dashboard').then(m=>m.Dashboard)
+                },
         {
                 path:'**', 
                 loadComponent:()=>import('./shared/not-found/not-found').then(m=>m.NotFound)

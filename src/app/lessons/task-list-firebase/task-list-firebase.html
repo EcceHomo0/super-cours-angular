@@ -1,0 +1,6 @@
+<input type="text" placeholder="Ajouter une tâche" [(ngModel)]="newTask.title" name="newTask" class="input input-bordered w-full max-w-xs" />
+<button class="btn btn-primary" (click)="addTask()">Ajouter</button>
+<p>{{newTask.title}}</p>
+<ul class="list-group">
+        <li *ngFor="let task of tasks" class="list-group-item">Tâche : {{ task.title }} - Statut : {{task.status}}</li>
+</ul>
